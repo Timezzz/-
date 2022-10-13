@@ -1,0 +1,59 @@
+/*todo: powered by  CSS Inspiration*/
+
+/*todo:当前问题-button1的阴影效果错误,后出现的同级目标不会被覆盖，
+       可能是box-shadow的逻辑问题（z-index大的覆盖小的,需要确定position,z-index才生效）
+       z-index属性只能在设置了position: relative | absolute | fixed的元素和父元素设置了
+       display: flex属性的子元素中起作用，在其他元素中是不作用的。
+  todo: 实现变化过程
+  todo: 实现按钮选定后的强调效果*/
+#read-guidance:hover{
+    box-shadow: 0 0 0 50vmax rgba(0, 0, 0, .5);
+}
+#skip-guidance:hover{
+    box-shadow: 0 0 0 50vmax rgba(0, 0, 0, .5);
+}
+
+/* 实现按钮选定后的强调效果完成*/
+
+#blc{
+    display:grid;
+    width:100%;
+    height:726px;
+    grid-template-columns:repeat(2,1fr);
+    padding:1px;
+    margin:1px;
+}
+
+.b_blc{
+    position: relative;
+    z-index:1;
+    display:grid;/*加上grid之后才能使按钮自动填满分区*/
+    padding:1px;
+    margin:1px;
+}
+
+/*用于统一管理按钮样式*/
+.btn{
+    /*设置文本字体属性*/
+    font-size:50px;
+    font-weight: 900;
+
+    /* 兼容Webkit(Chrome/Safari)内核浏览器的写法 */
+    -webkit-text-stroke: 3px #39C5BB;
+    color: #fff;
+
+    /*设置文本字体属性完毕*/
+
+    padding:1px;
+    margin:1px;
+}
+
+/*试着插入背景图片*/
+#read-guidance{
+    background-image:url("../source/pictures/1.jpg");
+    background-size:cover;/*todo:让背景图基于容器大小伸缩*/
+}
+#skip-guidance{
+    background-image:url("../source/pictures/2.jpg");
+    background-size:cover;/*todo:让背景图基于容器大小伸缩*/
+}

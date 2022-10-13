@@ -1,0 +1,155 @@
+<!--相对于原html，本页面尝试对AB棋盘嵌套快实现居中和分别管理id=A/B_board-->
+<!--用户友好度改进:错开布局，当移动到某行时，对手的同行数对应高亮-->
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>逍遥骰</title>
+<!--  该部分利用link引入CSS文件  -->
+<link rel="stylesheet" href="../css/game-style.css"/>
+
+</head>
+<body>
+
+<div id="All_page">
+    <div id="PK_board">
+        <div id="A_total" class="board">
+            <div id="A_counter">
+                <div id="A">玩家A</div>
+                <div id="A_score" class="score">0</div>
+            </div>
+
+            <div id="A_board" class="all_button">
+                <button id="A1" class="A_button" onclick="setNum(0,0,0)">0</button>
+                <button id="A2" class="A_button" onclick="setNum(0,1,0)">0</button>
+                <button id="A3" class="A_button" onclick="setNum(0,2,0)">0</button>
+                <p style="clear:both"></p>
+                <button id="A4" class="A_button" onclick="setNum(1,0,0)">0</button>
+                <button id="A5" class="A_button" onclick="setNum(1,1,0)">0</button>
+                <button id="A6" class="A_button" onclick="setNum(1,2,0)">0</button>
+                <p style="clear:both"></p>
+                <button id="A7" class="A_button" onclick="setNum(2,0,0)">0</button>
+                <button id="A8" class="A_button" onclick="setNum(2,1,0)">0</button>
+                <button id="A9" class="A_button" onclick="setNum(2,2,0)">0</button>
+            </div>
+        </div>
+
+        <div id="B_total" class="board">
+            <div id="B_counter">
+                <div id="B">玩家B</div>
+                <div id="B_score" class="score">0</div>
+            </div>
+
+            <div id="B_board" class="all_button">
+                <button id="B1" class="B_button" onclick="setNum(0,0,1)">0</button>
+                <button id="B2" class="B_button" onclick="setNum(0,1,1)">0</button>
+                <button id="B3" class="B_button" onclick="setNum(0,2,1)">0</button>
+                <p style="clear:both"></p>
+                <button id="B4" class="B_button" onclick="setNum(1,0,1)">0</button>
+                <button id="B5" class="B_button" onclick="setNum(1,1,1)">0</button>
+                <button id="B6" class="B_button" onclick="setNum(1,2,1)">0</button>
+                <p style="clear:both"></p>
+                <button id="B7" class="B_button" onclick="setNum(2,0,1)">0</button>
+                <button id="B8" class="B_button" onclick="setNum(2,1,1)">0</button>
+                <button id="B9" class="B_button" onclick="setNum(2,2,1)">0</button>
+            </div>
+        </div>
+    </div>
+
+<!--todo:    -->
+
+
+    <!--该部分作为游戏规则提示框-->
+    <div id="R_total" class="board">
+
+        <div class="window" id="window">
+            <div>现在是A的回合，请投掷骰子</div>
+        </div>
+        <!--后续若有改动,记得保留id:"num"与文本数字0-->
+
+    <!--R_board用于放置骰子和按钮-->
+        <div id="R_board">
+            <button id="play">PLAY</button>
+
+    <!--todo:插入骰子-->
+            <div id="t_dice">
+                <div class="dice">
+                    <div class="face">
+                        <div class="item1"></div>
+                    </div>
+                    <div class="face">
+                        <div class="item2"></div>
+                        <div class="item2"></div>
+                    </div>
+                    <div class="face">
+                        <div class="item3"></div>
+                        <div class="item3"></div>
+                        <div class="item3"></div>
+                    </div>
+                    <div class="face">
+                        <div class="face_0">
+                            <div class="item4"></div>
+                            <div class="item4"></div>
+                        </div>
+                         <div class="face_0">
+                            <div class="item4"></div>
+                            <div class="item4"></div>
+                        </div>
+                    </div>
+                    <div class="face">
+                        <div class="face_0">
+                            <div class="item5"></div>
+                            <div class="item5"></div>
+                        </div>
+                        <div class="face_0">
+                            <div class="item5"></div>
+                        </div>
+                        <div class="face_0">
+                            <div class="item5"></div>
+                            <div class="item5"></div>
+                        </div>
+                    </div>
+                    <div class="face">
+                        <div class="face_0">
+                            <div class="item6"></div>
+                            <div class="item6"></div>
+                        </div>
+                        <div class="face_0">
+                            <div class="item6"></div>
+                            <div class="item6"></div>
+                        </div>
+                        <div class="face_0">
+                            <div class="item6"></div>
+                            <div class="item6"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    <!--todo:骰子插入结束-->
+        </div>
+
+
+        <!--该部分作为回合提示框-->
+        <div id="window1">
+            <div>玩家&nbsp</div>
+            <div id="playerName">A</div>
+            <div>&nbsp回合</div>
+        </div>
+    </div>
+</div>
+
+
+
+<!--测试:仿造相同视觉效果的button,加上margin-->
+
+<!--进度条测试-->
+<progress id="VS" value="1" max="2"></progress>
+
+<!--该部分利用script引入js文件-->
+<script src="../js/game_AI.js"></script>
+
+</body>
+</html>
+
+
