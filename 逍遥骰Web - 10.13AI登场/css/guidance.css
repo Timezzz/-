@@ -1,0 +1,106 @@
+/*测试栅格定位*/
+/*todo:画面的理想高度时733px*/
+body{
+    background: #33FFCC;
+}
+
+#w0{
+    font-size: 13vh;
+    line-height: 15vh;
+}
+
+#w1{
+    line-height: 17vh;
+}
+
+#w2{
+    line-height: 17vh;
+}
+
+#w3{
+    transform:translateX(30vh);
+    font-size: 6vh;
+    line-height: 8vh;
+    text-align: left;
+}
+
+#w4{
+    height: 40vh;
+    font-size: 6vh;
+    line-height: 8vh;
+    text-align: center;
+}
+
+
+.g-word{
+    height: 35vh;
+    background: #33FFCC;
+    color: #fff;
+    line-height: 12vh;
+    text-align: center;
+    font-size: 8vh;
+}
+
+#go:hover{
+    background: #FFE211;/*todo:镜音连应援色*/
+    color: #FFA500;/*todo:镜音铃应援色*/
+
+    border:#35a5e5 1px solid;
+    box-shadow:0 0 5px rgba(81,203,238,1);
+    -webkit-box-shadow:0 0 5px rgba(81,203,238,1);
+    -moz-box-shadow:0 0 5px rgba(81,203,238,1);
+}
+
+#go{
+    height: 30vh;
+    background: #39C5BB;/*todo:Miku应援色*/
+    color: FFFF99;
+    line-height: 30vh;
+    text-align: center;
+    font-size: 20vh;
+}
+
+section {
+  height: 100vh;
+  /*todo:改动部位*/
+  background: #33FFCC;
+  /*todo:改动部位*/
+  color: #fff;
+  line-height: 100vh;
+  text-align: center;
+  font-size: 20vh;
+}
+
+.g-img1 {
+  background-image: url("../source/pictures/01.初始盘面.png");
+  background-attachment: fixed;
+  background-size: contain;
+  background-repeat:no-repeat;
+  background-position: center center;
+
+}
+
+.g-img2 {
+  background-image: url("../source/pictures/02.轮流掷骰.png");
+  background-attachment: fixed;
+  background-size: contain;
+  background-repeat:no-repeat;
+  background-position: center center;
+}
+
+.g-img3 {
+  background-image: url("../source/pictures/03.消除规则.png");
+  background-attachment: fixed;
+  background-size: contain;
+  background-repeat:no-repeat;
+  background-position: center center;
+}
+
+.g-img4 {
+  background-image: url("../source/pictures/04.结算规则.png");
+  background-attachment: fixed;
+  background-size: contain;
+  background-repeat:no-repeat;
+  background-position: center center;
+}
+

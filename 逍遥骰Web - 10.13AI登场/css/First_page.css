@@ -1,0 +1,8 @@
+/*todo:利用auto可以根据图片的长宽比例自适应*/
+
+#welcome_background{
+    position:absolute;
+    left:330px;
+    width:58%;
+    height:auto;
+}

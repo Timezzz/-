@@ -1,0 +1,47 @@
+#all{
+    display:grid;
+    width:80%;
+    height:97.5vh;
+    grid-template-columns:repeat(2,1fr);
+    transform:translate(10%,-0%)
+}
+
+.hov{
+    /*todo:最后采用了<br/>无限换行的方式调整到合适的位置，希望之后可以找到合适的替代方式*/
+    text-align: center;
+    border: 1px solid #666;
+    cursor: pointer;
+    transition: all .2s;
+
+    /*设置文本字体属性*/
+    font-size:50px;
+    font-weight: 900;
+
+    /* 兼容Webkit(Chrome/Safari)内核浏览器的写法 */
+    -webkit-text-stroke: 3px #39C5BB; /*初音未来应援色(๑•̀ㅂ•́)و✧*/
+    color: #fff;
+
+    /*设置文本字体属性完毕*/
+
+    padding:1px;
+    margin:1px;
+}
+
+.hov:hover {
+    box-shadow: 0 0 0 100vmax rgba(0, 0, 0, .5);
+    z-index:3; /*todo:把z-index变大使特效覆盖在图片上*/
+}
+
+/*插入图片*/
+/*todo:插入图片后覆盖优先级变化
+       改为利用hover对另一按钮控制
+       或者利用img */
+
+#a{
+    background-image:url("../source/pictures/1.jpg");
+    background-size:cover;
+}
+#b{
+    background-image:url("../source/pictures/2.jpg");
+    background-size:cover;
+}
